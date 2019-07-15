@@ -31,5 +31,6 @@ def reverse_transfer
   self.withdraw(@amount)
   @status = "reversed"
 end
+end
 
 end

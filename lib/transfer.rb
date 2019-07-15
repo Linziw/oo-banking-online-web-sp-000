@@ -28,7 +28,7 @@ end
 def reverse_transfer
   if @status == "complete"
   self.sender.deposit(@amount)
-  self.withdraw(@amount)
+  self.receiver.withdraw(@amount)
   @status = "reversed"
 end
 end

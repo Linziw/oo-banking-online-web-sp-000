@@ -16,8 +16,9 @@ class Transfer
   
   def execute_transaction
     if !self.sender.valid?
+      
       puts "Transaction rejected. Please check your account balance."
-      @status = "rejected"
+      
     elsif @status == "pending"
     self.receiver.deposit(@amount)
     self.sender.withdraw(@amount)

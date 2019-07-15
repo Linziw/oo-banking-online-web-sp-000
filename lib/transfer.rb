@@ -15,10 +15,10 @@ class Transfer
   end
   
   def execute_transaction
-    if self.status = !"complete" || "rejected"
+    if @status = "pending"
     self.receiver.deposit(self.amount)
     self.sender.withdraw(self.amount)
-    self.status = "complete"
+    @status = "complete"
   end
 end
 

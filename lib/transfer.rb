@@ -16,7 +16,7 @@ class Transfer
   
   def execute_transaction
     self.receiver.deposit(self.amount)
-    binding.pry
+    #binding.pry
   end
 
 end

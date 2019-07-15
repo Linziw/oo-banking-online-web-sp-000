@@ -1,3 +1,4 @@
+require "pry"
 class Transfer
   
   attr_accessor :sender, :receiver, :amount
@@ -6,5 +7,6 @@ class Transfer
     @sender=sender
     @receiver = receiver
     @amount = amount
+    binding.pry
   end
 end

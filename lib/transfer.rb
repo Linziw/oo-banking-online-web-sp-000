@@ -16,12 +16,9 @@ class Transfer
   
   def execute_transaction
      binding.pry
-    if self.sender.valid? == false
+    if self.sender.!valid? || self.sender.balance < @amount
       @status = "rejected"
-      elsif self.sender.
-     
-      return "Transaction rejected. Please check your account balance."
-      
+     return "Transaction rejected. Please check your account balance."
     elsif @status == "pending"
     self.receiver.deposit(@amount)
     self.sender.withdraw(@amount)

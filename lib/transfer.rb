@@ -15,7 +15,7 @@ class Transfer
   end
   
   def execute_transaction
-    while status = "pending"
+    while self.status = "pending"
     self.receiver.deposit(self.amount)
     self.sender.withdraw(self.amount)
     self.status = "complete"

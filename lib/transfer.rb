@@ -20,5 +20,6 @@ class Transfer
     self.sender.withdraw(self.amount)
     self.status = "complete"
   end
+end
 
 end
